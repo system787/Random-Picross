@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 enum ActionState {
     case CHECK
     case FLAG
@@ -19,12 +20,11 @@ enum ActionResult {
     case CHECK_INCORRECT
 }
 
-class GameController {
-    var mGameBoard: [[Int]]
+class GameController: ObservableObject {
+    var mGameBoard: [[Int]] = [[]]
     
-    init(_ gameBoardSize: BoardSize) {
-        let board = Board(gameBoardSize)
-        self.mGameBoard = board.getBoard()
+    init() {
+        startGame(BoardSize.LARGE)
     }
     
     // MARK: - Private Functions
@@ -59,6 +59,13 @@ class GameController {
     }
     
     // MARK: - Public Functions
+    func startGame(_ boardSize: BoardSize) {
+        let board = Board(boardSize)
+        mGameBoard = board.getBoard()
+        
+        print("Game started with board size \(boardSize.rawValue)")
+    }
+    
     func getColumnCount(_ column: Int) -> [Int] {
         return getRowCount(getColumn(column))
     }

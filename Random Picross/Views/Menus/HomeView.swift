@@ -1,5 +1,5 @@
 //
-//  GameBoard.swift
+//  HomeView.swift
 //  Random Picross
 //
 //  Created by Vincent Hoang on 10/15/20.
@@ -8,16 +8,14 @@
 
 import SwiftUI
 
-struct GameBoard: View {
-    var gameController: GameController?
-    
+struct HomeView: View {
     var body: some View {
-        Text("Hello, world!")
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct GameBoard_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        GameBoard()
+        HomeView()
     }
 }
