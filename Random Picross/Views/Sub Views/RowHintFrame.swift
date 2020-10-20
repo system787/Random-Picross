@@ -1,24 +1,24 @@
 //
-//  HintFrame.swift
+//  RowHintFrame.swift
 //  Random Picross
 //
-//  Created by Vincent Hoang on 10/15/20.
+//  Created by Vincent Hoang on 10/16/20.
 //  Copyright © 2020 Vincent Hoang. All rights reserved.
 //
 
 import SwiftUI
 
-struct HintFrame: View {
+struct RowHintFrame: View {
     let hintArray: [Int]
     let color: Color
     
     var body: some View {
-        VStack(spacing: 0.5) {
+        HStack(spacing: 3.0) {
             ForEach(hintArray, id: \.self) { hint in
                 HintText(String(hint))
             }
         }
-        .frame(width: 18, height: 90, alignment: .center)
+        .frame(width: 75, height: 18, alignment: .center)
         .background(color)
     }
     
@@ -28,8 +28,8 @@ struct HintFrame: View {
     }
 }
 
-struct HintFrame_Previews: PreviewProvider {
+struct RowHintFrame_Previews: PreviewProvider {
     static var previews: some View {
-        HintFrame([3, 2, 1], Color.red)
+        RowHintFrame([6, 5, 4], Color.red)
     }
 }

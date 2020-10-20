@@ -9,14 +9,14 @@
 import SwiftUI
 
 struct HintText: View {
-    var hint: String
+    let hint: String
     
     init(_ hint: String) {
         self.hint = hint
     }
     
     var body: some View {
-        Text(hint).font(.subheadline).foregroundColor(.white)
+        Text(hint).font(.caption2).foregroundColor(.white)
     }
 }
 

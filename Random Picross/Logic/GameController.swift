@@ -22,8 +22,10 @@ enum ActionResult {
 
 class GameController: ObservableObject {
     var mGameBoard: [[Int]] = [[]]
+    var mBoardSize: BoardSize
     
     init() {
+        self.mBoardSize = BoardSize.LARGE
         startGame(BoardSize.LARGE)
     }
     

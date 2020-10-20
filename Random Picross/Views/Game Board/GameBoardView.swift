@@ -12,13 +12,70 @@ struct GameBoardView: View {
     @EnvironmentObject var gameController: GameController
     
     var body: some View {
-        HStack(spacing: 1.0) {
-            Spacer()
-                .frame(width: 50.0)
-            ForEach (0..<gameController.mGameBoard.count, id: \.self) { i in
-                HintFrame(gameController.getColumnCount(i))
+        VStack(alignment: .leading) {
+            // top hints panel
+            HStack(spacing: 0.0) {
+                Spacer().frame(width: 3.0)
+                
+                Spacer()
+                    .frame(width: 75, height: 75, alignment: .center)
+                
+                ForEach (0..<5, id: \.self) { i in
+                    HintFrame(gameController.getColumnCount(i), Color.blue)
+                }
+                
+                if gameController.mBoardSize == BoardSize.MEDIUM {
+                    ForEach (5..<10, id: \.self) { i in
+                        HintFrame(gameController.getColumnCount(i), Color.gray)
+                    }
+                }
+                
+                if gameController.mBoardSize == BoardSize.LARGE {
+                    ForEach (5..<10, id: \.self) { i in
+                        HintFrame(gameController.getColumnCount(i), Color.gray)
+                    }
+                    
+                    ForEach (10..<15, id: \.self) { i in
+                        HintFrame(gameController.getColumnCount(i), Color.blue)
+                    }
+                }
+                
+                Spacer().frame(width: 1.0)
+            }.frame(alignment: .topLeading)
+            
+            Spacer().frame(height: 3.0)
+            
+            //
+            HStack() {
+                // left hints panel
+                VStack(spacing: 0.0) {
+                    ForEach (0..<5, id: \.self) { i in
+                        RowHintFrame(gameController.getRowCount(i), Color.blue)
+                    }
+                    
+                    if gameController.mBoardSize == BoardSize.MEDIUM {
+                        ForEach (5..<10, id: \.self) { i in
+                            RowHintFrame(gameController.getRowCount(i), Color.gray)
+                        }
+                    }
+                    
+                    if gameController.mBoardSize == BoardSize.LARGE {
+                        ForEach (5..<10, id: \.self) { i in
+                            RowHintFrame(gameController.getRowCount(i), Color.gray)
+                        }
+                        
+                        ForEach (10..<15, id: \.self) { i in
+                            RowHintFrame(gameController.getRowCount(i), Color.blue)
+                        }
+                    }
+                }.frame(alignment: .topLeading)
+                
+                Spacer().frame(width: 3.0)
+                
+                GameGrid()
             }
-        }.padding(.trailing)
+            
+        }
     }
 
 }

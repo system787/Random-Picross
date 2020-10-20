@@ -9,13 +9,27 @@
 import SwiftUI
 
 struct GameTile: View {
+    let x: Int
+    let y: Int
+    var function: (Int, Int) -> Void
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: { function(x, y) } ) {
+            Image("tile_unchecked_18x18")
+        }
+            .frame(width: 18, height: 18, alignment: .topLeading)
+            .border(Color.black, width: 0.2)
+    }
+    
+    init(x: Int, y: Int, function: @escaping (Int, Int) -> Void) {
+        self.x = x
+        self.y = y
+        self.function = function
     }
 }
 
 struct GameTile_Previews: PreviewProvider {
     static var previews: some View {
-        GameTile()
+        GameTile(x: 0, y: 1, function: {x, y in })
     }
 }
