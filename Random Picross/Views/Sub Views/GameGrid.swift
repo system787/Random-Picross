@@ -17,7 +17,7 @@ struct GameGrid: View {
                 ForEach (0..<15) { y in
                     HStack(spacing: 0.0) {
                         ForEach (0..<15) { x in
-                            GameTile(x: x, y: y, function: self.buttonPressed )
+                            GameTile(x: x, y: y, function: self.buttonPressed)
                         }
                     }
                 }
@@ -27,7 +27,7 @@ struct GameGrid: View {
     }
     
     func buttonPressed(x: Int, y: Int) -> Void {
-        print("Button pressed ")
+        gameController.updateUserBoard(x: x, y: y)
         tileAction(x: x, y: y)
     }
     

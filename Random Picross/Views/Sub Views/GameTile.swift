@@ -9,13 +9,21 @@
 import SwiftUI
 
 struct GameTile: View {
+    @EnvironmentObject var gameController: GameController
+    
     let x: Int
     let y: Int
     var function: (Int, Int) -> Void
     
     var body: some View {
         Button(action: { function(x, y) } ) {
-            Image("tile_unchecked_18x18")
+            if gameController.mUserBoard[x][y] == 0 {
+                Image("tile_unchecked_18x18")
+            } else if gameController.mUserBoard[x][y] == 1 {
+                Image("tile_checked_18x18")
+            } else {
+                Image("tile_x_18x18")
+            }
         }
             .frame(width: 18, height: 18, alignment: .topLeading)
             .border(Color.black, width: 0.2)

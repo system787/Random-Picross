@@ -64,4 +64,18 @@ class Board {
     func getBoard() -> [[Int]] {
         return mGameBoard
     }
+    
+    func getEmptyBoard() -> [[Int]] {
+        var emptyBoard = [[Int]]()
+        
+        for _ in 0..<mBoardSize {
+            var row = [Int]()
+            for _ in 0..<mBoardSize {
+                row.append(0)
+            }
+            emptyBoard.append(row)
+        }
+        
+        return emptyBoard
+    }
 }

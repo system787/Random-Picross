@@ -15,6 +15,8 @@
 		BE83026C25394D5900E760B4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE83026B25394D5900E760B4 /* HomeView.swift */; };
 		BE8302B9253A9B0B00E760B4 /* RowHintFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8302B8253A9B0B00E760B4 /* RowHintFrame.swift */; };
 		BE8302C1253AB7E800E760B4 /* GameGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8302C0253AB7E800E760B4 /* GameGrid.swift */; };
+		BEA3BF97253E9E6600882945 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA3BF96253E9E6600882945 /* GameView.swift */; };
+		BEA3BF9F253EA0C200882945 /* ActionToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA3BF9E253EA0C200882945 /* ActionToggle.swift */; };
 		BEF343962538EC460037858C /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF343952538EC460037858C /* GameController.swift */; };
 		BEF343982538EC770037858C /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF343972538EC770037858C /* Board.swift */; };
 		BEF3439A2538ED110037858C /* GameBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF343992538ED110037858C /* GameBoardView.swift */; };
@@ -56,6 +58,8 @@
 		BE83026B25394D5900E760B4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		BE8302B8253A9B0B00E760B4 /* RowHintFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowHintFrame.swift; sourceTree = "<group>"; };
 		BE8302C0253AB7E800E760B4 /* GameGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGrid.swift; sourceTree = "<group>"; };
+		BEA3BF96253E9E6600882945 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		BEA3BF9E253EA0C200882945 /* ActionToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionToggle.swift; sourceTree = "<group>"; };
 		BEF343952538EC460037858C /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		BEF343972538EC770037858C /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		BEF343992538ED110037858C /* GameBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardView.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 		BE337767252D031A004E7956 /* Random Picross */ = {
 			isa = PBXGroup;
 			children = (
+				BEA3BFA3253EAA9900882945 /* Models */,
 				BEF343A4253935FB0037858C /* RandomPicross.swift */,
 				BEF343922538EC1C0037858C /* Views */,
 				BEF343912538EC170037858C /* Logic */,
@@ -150,6 +155,13 @@
 			path = "Random PicrossUITests";
 			sourceTree = "<group>";
 		};
+		BEA3BFA3253EAA9900882945 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BEF343912538EC170037858C /* Logic */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,17 +176,17 @@
 			children = (
 				BEF3439D253918FA0037858C /* Sub Views */,
 				BEF343942538EC260037858C /* Menus */,
-				BEF343932538EC200037858C /* Game Board */,
+				BEF343932538EC200037858C /* GameView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		BEF343932538EC200037858C /* Game Board */ = {
+		BEF343932538EC200037858C /* GameView */ = {
 			isa = PBXGroup;
 			children = (
-				BEF343992538ED110037858C /* GameBoardView.swift */,
+				BEA3BF96253E9E6600882945 /* GameView.swift */,
 			);
-			path = "Game Board";
+			path = GameView;
 			sourceTree = "<group>";
 		};
 		BEF343942538EC260037858C /* Menus */ = {
@@ -193,6 +205,8 @@
 				BEF343A0253931150037858C /* HintText.swift */,
 				BEF343A2253932DE0037858C /* GameTile.swift */,
 				BE8302C0253AB7E800E760B4 /* GameGrid.swift */,
+				BEF343992538ED110037858C /* GameBoardView.swift */,
+				BEA3BF9E253EA0C200882945 /* ActionToggle.swift */,
 			);
 			path = "Sub Views";
 			sourceTree = "<group>";
@@ -333,10 +347,12 @@
 				BEF343962538EC460037858C /* GameController.swift in Sources */,
 				BE8302B9253A9B0B00E760B4 /* RowHintFrame.swift in Sources */,
 				BEF343982538EC770037858C /* Board.swift in Sources */,
+				BEA3BF9F253EA0C200882945 /* ActionToggle.swift in Sources */,
 				BEF343A3253932DE0037858C /* GameTile.swift in Sources */,
 				BE83026C25394D5900E760B4 /* HomeView.swift in Sources */,
 				BEF343A1253931150037858C /* HintText.swift in Sources */,
 				BEF3439A2538ED110037858C /* GameBoardView.swift in Sources */,
+				BEA3BF97253E9E6600882945 /* GameView.swift in Sources */,
 				BEF3439F253919170037858C /* HintFrame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

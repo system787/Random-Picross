@@ -20,6 +20,8 @@ struct RowHintFrame: View {
         }
         .frame(width: 75, height: 18, alignment: .center)
         .background(color)
+        .border(Color.white, width: 0.4)
+        .cornerRadius(4.0)
     }
     
     init(_ hintArray: [Int], _ color: Color) {

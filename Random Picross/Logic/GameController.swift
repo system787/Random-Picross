@@ -21,8 +21,11 @@ enum ActionResult {
 }
 
 class GameController: ObservableObject {
-    var mGameBoard: [[Int]] = [[]]
     var mBoardSize: BoardSize
+    var mGameBoard: [[Int]] = [[]]
+    
+    @Published var mUserBoard: [[Int]] = [[]]
+    @Published var actionToggle = false
     
     init() {
         self.mBoardSize = BoardSize.LARGE
@@ -60,10 +63,24 @@ class GameController: ObservableObject {
         return rowCounts
     }
     
+    private func compareArrays() -> Bool {
+        for i in 0..<mGameBoard.count {
+            for j in 0..<mGameBoard.count {
+                if mGameBoard[i][j] == 1 {
+                    if mUserBoard[i][j] != mGameBoard[i][j] {
+                        return false
+                    }
+                }
+            }
+        }
+        return true
+    }
+    
     // MARK: - Public Functions
     func startGame(_ boardSize: BoardSize) {
         let board = Board(boardSize)
         mGameBoard = board.getBoard()
+        mUserBoard = board.getEmptyBoard()
         
         print("Game started with board size \(boardSize.rawValue)")
     }
@@ -76,6 +93,36 @@ class GameController: ObservableObject {
         return getRowCount(mGameBoard[row])
     }
     
+    func updateUserBoard(x: Int, y: Int) {
+        if actionToggle {
+            let currentValue = mUserBoard[x][y]
+            if currentValue == 0 {
+                mUserBoard[x][y] = 1
+            } else {
+                mUserBoard[x][y] = 0
+            }
+        } else if mUserBoard[x][y] == 0{
+            mUserBoard[x][y] = 2
+        } else {
+            mUserBoard[x][y] = 0
+        }
+        
+        checkWinCondition()
+    }
+    
+    func checkWinCondition() {
+        if compareArrays() {
+            print("Correct tile selected")
+        } else {
+            print("Incorrect tile selected")
+        }
+    }
+    
+    func translateArray(x: Int, y: Int) {
+
+    }
+    
+    // deprecated
     func updateTile(_ tile: [Int], _ tileState: TileState) {
         mGameBoard[tile[0]][tile[1]] = tileState.rawValue
     }
