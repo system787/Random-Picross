@@ -11,7 +11,8 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         VStack {
-            Image("partial_board_graphic")
+            Text("Home Screen Placeholder").font(.title).foregroundColor(Color.blue).shadow(radius: 3)
+            Spacer().frame(height: 100)
         }
     }
 }

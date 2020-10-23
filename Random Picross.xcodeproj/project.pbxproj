@@ -12,11 +12,14 @@
 		BE337775252D031E004E7956 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE337774252D031E004E7956 /* Preview Assets.xcassets */; };
 		BE337783252D031E004E7956 /* Random_PicrossTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE337782252D031E004E7956 /* Random_PicrossTests.swift */; };
 		BE33778E252D031E004E7956 /* Random_PicrossUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE33778D252D031E004E7956 /* Random_PicrossUITests.swift */; };
+		BE67E39525429B5E0055C691 /* DifficultySelectionMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE67E39425429B5E0055C691 /* DifficultySelectionMenu.swift */; };
 		BE83026C25394D5900E760B4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE83026B25394D5900E760B4 /* HomeView.swift */; };
 		BE8302B9253A9B0B00E760B4 /* RowHintFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8302B8253A9B0B00E760B4 /* RowHintFrame.swift */; };
 		BE8302C1253AB7E800E760B4 /* GameGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8302C0253AB7E800E760B4 /* GameGrid.swift */; };
 		BEA3BF97253E9E6600882945 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA3BF96253E9E6600882945 /* GameView.swift */; };
 		BEA3BF9F253EA0C200882945 /* ActionToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA3BF9E253EA0C200882945 /* ActionToggle.swift */; };
+		BEF0DC67254173AA0081757D /* ButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF0DC66254173AA0081757D /* ButtonGroup.swift */; };
+		BEF0DC6F25418ADC0081757D /* DifficultySelectionCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF0DC6E25418ADC0081757D /* DifficultySelectionCarousel.swift */; };
 		BEF343962538EC460037858C /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF343952538EC460037858C /* GameController.swift */; };
 		BEF343982538EC770037858C /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF343972538EC770037858C /* Board.swift */; };
 		BEF3439A2538ED110037858C /* GameBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF343992538ED110037858C /* GameBoardView.swift */; };
@@ -55,11 +58,14 @@
 		BE337789252D031E004E7956 /* Random PicrossUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Random PicrossUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE33778D252D031E004E7956 /* Random_PicrossUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random_PicrossUITests.swift; sourceTree = "<group>"; };
 		BE33778F252D031E004E7956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE67E39425429B5E0055C691 /* DifficultySelectionMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultySelectionMenu.swift; sourceTree = "<group>"; };
 		BE83026B25394D5900E760B4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		BE8302B8253A9B0B00E760B4 /* RowHintFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowHintFrame.swift; sourceTree = "<group>"; };
 		BE8302C0253AB7E800E760B4 /* GameGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGrid.swift; sourceTree = "<group>"; };
 		BEA3BF96253E9E6600882945 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		BEA3BF9E253EA0C200882945 /* ActionToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionToggle.swift; sourceTree = "<group>"; };
+		BEF0DC66254173AA0081757D /* ButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroup.swift; sourceTree = "<group>"; };
+		BEF0DC6E25418ADC0081757D /* DifficultySelectionCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultySelectionCarousel.swift; sourceTree = "<group>"; };
 		BEF343952538EC460037858C /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		BEF343972538EC770037858C /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		BEF343992538ED110037858C /* GameBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardView.swift; sourceTree = "<group>"; };
@@ -162,6 +168,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		BEF0DC652541738B0081757D /* Menu Sub Views */ = {
+			isa = PBXGroup;
+			children = (
+				BEF0DC66254173AA0081757D /* ButtonGroup.swift */,
+			);
+			path = "Menu Sub Views";
+			sourceTree = "<group>";
+		};
 		BEF343912538EC170037858C /* Logic */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,7 +188,6 @@
 		BEF343922538EC1C0037858C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BEF3439D253918FA0037858C /* Sub Views */,
 				BEF343942538EC260037858C /* Menus */,
 				BEF343932538EC200037858C /* GameView */,
 			);
@@ -184,6 +197,7 @@
 		BEF343932538EC200037858C /* GameView */ = {
 			isa = PBXGroup;
 			children = (
+				BEF3439D253918FA0037858C /* Game Sub Views */,
 				BEA3BF96253E9E6600882945 /* GameView.swift */,
 			);
 			path = GameView;
@@ -192,12 +206,15 @@
 		BEF343942538EC260037858C /* Menus */ = {
 			isa = PBXGroup;
 			children = (
+				BEF0DC652541738B0081757D /* Menu Sub Views */,
 				BE83026B25394D5900E760B4 /* HomeView.swift */,
+				BEF0DC6E25418ADC0081757D /* DifficultySelectionCarousel.swift */,
+				BE67E39425429B5E0055C691 /* DifficultySelectionMenu.swift */,
 			);
 			path = Menus;
 			sourceTree = "<group>";
 		};
-		BEF3439D253918FA0037858C /* Sub Views */ = {
+		BEF3439D253918FA0037858C /* Game Sub Views */ = {
 			isa = PBXGroup;
 			children = (
 				BEF3439E253919170037858C /* HintFrame.swift */,
@@ -208,7 +225,7 @@
 				BEF343992538ED110037858C /* GameBoardView.swift */,
 				BEA3BF9E253EA0C200882945 /* ActionToggle.swift */,
 			);
-			path = "Sub Views";
+			path = "Game Sub Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,9 +364,12 @@
 				BEF343962538EC460037858C /* GameController.swift in Sources */,
 				BE8302B9253A9B0B00E760B4 /* RowHintFrame.swift in Sources */,
 				BEF343982538EC770037858C /* Board.swift in Sources */,
+				BE67E39525429B5E0055C691 /* DifficultySelectionMenu.swift in Sources */,
 				BEA3BF9F253EA0C200882945 /* ActionToggle.swift in Sources */,
 				BEF343A3253932DE0037858C /* GameTile.swift in Sources */,
 				BE83026C25394D5900E760B4 /* HomeView.swift in Sources */,
+				BEF0DC67254173AA0081757D /* ButtonGroup.swift in Sources */,
+				BEF0DC6F25418ADC0081757D /* DifficultySelectionCarousel.swift in Sources */,
 				BEF343A1253931150037858C /* HintText.swift in Sources */,
 				BEF3439A2538ED110037858C /* GameBoardView.swift in Sources */,
 				BEA3BF97253E9E6600882945 /* GameView.swift in Sources */,

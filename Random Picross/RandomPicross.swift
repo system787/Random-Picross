@@ -15,7 +15,11 @@ struct RandomPicross: App {
     
     var body: some Scene {
         WindowGroup {
-            GameView().environmentObject(gameController)
+            DifficultySelectionMenu().environmentObject(gameController)
+        }
+        
+        WindowGroup {
+            GameBoardView().environmentObject(gameController)
         }
     }
 }
