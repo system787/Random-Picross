@@ -10,18 +10,20 @@ import SwiftUI
 
 struct HintText: View {
     let hint: String
+    let fontSize: Font
     
-    init(_ hint: String) {
+    init(_ hint: String, _ fontSize: Font) {
         self.hint = hint
+        self.fontSize = fontSize
     }
     
     var body: some View {
-        Text(hint).font(.caption2).foregroundColor(.white)
+        Text(hint).font(fontSize).foregroundColor(.white)
     }
 }
 
 struct HintText_Previews: PreviewProvider {
     static var previews: some View {
-        HintText("1")
+        HintText("1", .caption2)
     }
 }

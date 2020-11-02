@@ -50,22 +50,22 @@ struct GameBoardView: View {
                 // left hints panel
                 VStack(spacing: 0.0) {
                     ForEach (0..<5, id: \.self) { i in
-                        RowHintFrame(gameController.getRowCount(i), Color.blue)
+                        RowHintFrame(gameController.getRowCount(i), Color.blue, gameController.mBoardSize)
                     }
                     
                     if gameController.mBoardSize == BoardSize.MEDIUM {
                         ForEach (5..<10, id: \.self) { i in
-                            RowHintFrame(gameController.getRowCount(i), Color.gray)
+                            RowHintFrame(gameController.getRowCount(i), Color.gray, gameController.mBoardSize)
                         }
                     }
                     
                     if gameController.mBoardSize == BoardSize.LARGE {
                         ForEach (5..<10, id: \.self) { i in
-                            RowHintFrame(gameController.getRowCount(i), Color.gray)
+                            RowHintFrame(gameController.getRowCount(i), Color.gray, gameController.mBoardSize)
                         }
                         
                         ForEach (10..<15, id: \.self) { i in
-                            RowHintFrame(gameController.getRowCount(i), Color.blue)
+                            RowHintFrame(gameController.getRowCount(i), Color.blue, gameController.mBoardSize)
                         }
                     }
                 }.frame(alignment: .topLeading)

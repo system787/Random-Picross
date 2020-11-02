@@ -17,7 +17,7 @@ struct HintFrame: View {
         if boardSize == BoardSize.LARGE {
             let large = VStack(spacing: 0.5) {
                 ForEach(hintArray, id: \.self) { hint in
-                    HintText(String(hint))
+                    HintText(String(hint), Font.caption2)
                 }
             }
             .frame(width: 18, height: 90, alignment: .center)
@@ -29,7 +29,7 @@ struct HintFrame: View {
         } else if boardSize == BoardSize.MEDIUM {
             let medium = VStack(spacing: 0.5) {
                 ForEach(hintArray, id: \.self) { hint in
-                    HintText(String(hint))
+                    HintText(String(hint), Font.body)
                 }
             }
                 .frame(width: 27, height: 135, alignment: .center)
@@ -41,7 +41,7 @@ struct HintFrame: View {
         } else {
             let small = VStack(spacing: 0.5) {
                 ForEach(hintArray, id: \.self) { hint in
-                    HintText(String(hint))
+                    HintText(String(hint), Font.title2)
                 }
             }
                 .frame(width: 36, height: 135, alignment: .center)
@@ -65,5 +65,7 @@ struct HintFrame: View {
 struct HintFrame_Previews: PreviewProvider {
     static var previews: some View {
         HintFrame([3, 2, 1], Color.red, BoardSize.SMALL)
+        HintFrame([3, 2, 1], Color.red, BoardSize.MEDIUM)
+        HintFrame([3, 2, 1], Color.red, BoardSize.LARGE)
     }
 }
