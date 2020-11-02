@@ -14,9 +14,13 @@ struct ButtonGroup: View {
     
     var body: some View {
         VStack(alignment: .center, spacing: 5) {
-            Button("Start Game", action: startGame)
-                .frame(width: 250, height: 50, alignment: .center)
-                .font(.title)
+            NavigationLink(
+                destination: GameView().onAppear {
+                    startGame()
+                },
+                label: {
+                    Text("Start Game").font(.title)
+                }).frame(width: 250, height: 50, alignment: .center)
                 .foregroundColor(.white)
                 .background(Color.blue)
                 .cornerRadius(12.0)

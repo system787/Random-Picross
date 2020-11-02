@@ -15,7 +15,7 @@ struct DifficultySelectionMenu: View {
             
             ZStack {
                 DifficultySelectionCarousel(itemHeight: 400, views: [
-                        AnyView(VStack {
+                    AnyView(VStack {
                                 Text("Small - 5x5").font(.title2)
                                 Spacer().frame(height: 50)
                                 ButtonGroup(boardSize: BoardSize.SMALL) }),

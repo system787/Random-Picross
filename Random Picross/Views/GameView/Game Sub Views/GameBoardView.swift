@@ -21,22 +21,22 @@ struct GameBoardView: View {
                     .frame(width: 75, height: 75, alignment: .center)
                 
                 ForEach (0..<5, id: \.self) { i in
-                    HintFrame(gameController.getColumnCount(i), Color.blue)
+                    HintFrame(gameController.getColumnCount(i), Color.blue, gameController.mBoardSize)
                 }
                 
                 if gameController.mBoardSize == BoardSize.MEDIUM {
                     ForEach (5..<10, id: \.self) { i in
-                        HintFrame(gameController.getColumnCount(i), Color.gray)
+                        HintFrame(gameController.getColumnCount(i), Color.gray, gameController.mBoardSize)
                     }
                 }
                 
                 if gameController.mBoardSize == BoardSize.LARGE {
                     ForEach (5..<10, id: \.self) { i in
-                        HintFrame(gameController.getColumnCount(i), Color.gray)
+                        HintFrame(gameController.getColumnCount(i), Color.gray, gameController.mBoardSize)
                     }
                     
                     ForEach (10..<15, id: \.self) { i in
-                        HintFrame(gameController.getColumnCount(i), Color.blue)
+                        HintFrame(gameController.getColumnCount(i), Color.blue, gameController.mBoardSize)
                     }
                 }
                 
