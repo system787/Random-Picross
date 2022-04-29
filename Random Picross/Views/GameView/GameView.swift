@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct GameView: View {
+    @EnvironmentObject var gameController: GameController
+    
     var body: some View {
         VStack(alignment: .center) {
             GameBoardView()

@@ -32,24 +32,24 @@ struct HintFrame: View {
                     HintText(String(hint), Font.body)
                 }
             }
-                .frame(width: 27, height: 135, alignment: .center)
-                .background(color)
-                .border(Color.white, width: 0.4)
-                .cornerRadius(4.0)
+            .frame(width: 27, height: 135, alignment: .center)
+            .background(color)
+            .border(Color.white, width: 0.4)
+            .cornerRadius(4.0)
                 
-                medium
+            medium
         } else {
             let small = VStack(spacing: 0.5) {
                 ForEach(hintArray, id: \.self) { hint in
                     HintText(String(hint), Font.title2)
                 }
             }
-                .frame(width: 36, height: 135, alignment: .center)
-                .background(color)
-                .border(Color.white, width: 0.4)
-                .cornerRadius(4.0)
+            .frame(width: 36, height: 135, alignment: .center)
+            .background(color)
+            .border(Color.white, width: 0.4)
+            .cornerRadius(4.0)
                 
-                small
+            small
         }
         
         

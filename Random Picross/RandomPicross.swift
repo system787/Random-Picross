@@ -20,6 +20,8 @@ struct RandomPicross: App {
         
         WindowGroup {
             GameBoardView().environmentObject(gameController)
+            GameView().environmentObject(gameController)
         }
+        
     }
 }

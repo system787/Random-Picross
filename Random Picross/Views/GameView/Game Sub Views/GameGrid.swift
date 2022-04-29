@@ -23,6 +23,26 @@ struct GameGrid: View {
                 }
             }.frame(alignment: .topLeading)
             .border(Color.black, width: 0.5)
+        } else if gameController.mBoardSize == BoardSize.MEDIUM {
+            VStack(spacing: 0.0) {
+                ForEach (0..<10) { y in
+                    HStack(spacing: 0.0) {
+                        ForEach (0..<10) { x in
+                            GameTile(x: x, y: y, function: self.buttonPressed)
+                        }
+                    }
+                }
+            }
+        } else {
+            VStack(spacing: 0.0) {
+                ForEach (0..<5) { y in
+                    HStack(spacing: 0.0) {
+                        ForEach(0..<5) { x in
+                            GameTile(x: x, y: y, function: self.buttonPressed)
+                        }
+                    }
+                }
+            }
         }
     }
     

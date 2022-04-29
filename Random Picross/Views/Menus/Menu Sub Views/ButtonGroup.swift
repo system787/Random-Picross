@@ -15,10 +15,7 @@ struct ButtonGroup: View {
     var body: some View {
         VStack(alignment: .center, spacing: 5) {
             NavigationLink(
-                destination: GameView().onAppear {
-                    startGame()
-                },
-                label: {
+                destination: GameView(), label: {
                     Text("Start Game").font(.title)
                 }).frame(width: 250, height: 50, alignment: .center)
                 .foregroundColor(.white)

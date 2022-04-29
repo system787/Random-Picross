@@ -29,7 +29,8 @@ class GameController: ObservableObject {
     
     init() {
         self.mBoardSize = BoardSize.LARGE
-        startGame(BoardSize.LARGE)
+        
+        startGame(mBoardSize)
     }
     
     // MARK: - Private Functions
@@ -81,6 +82,7 @@ class GameController: ObservableObject {
         let board = Board(boardSize)
         mGameBoard = board.getBoard()
         mUserBoard = board.getEmptyBoard()
+        mBoardSize = boardSize
         
         print("Game started with board size \(boardSize.rawValue)")
     }

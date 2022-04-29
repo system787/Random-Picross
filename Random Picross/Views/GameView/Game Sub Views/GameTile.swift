@@ -16,7 +16,7 @@ struct GameTile: View {
     var function: (Int, Int) -> Void
     
     var body: some View {
-        Button(action: { function(x, y) } ) {
+        let button = Button(action: { function(x, y) } ) {
             if gameController.mUserBoard[x][y] == 0 {
                 Image("tile_unchecked_18x18")
             } else if gameController.mUserBoard[x][y] == 1 {
@@ -25,8 +25,15 @@ struct GameTile: View {
                 Image("tile_x_18x18")
             }
         }
-            .frame(width: 18, height: 18, alignment: .topLeading)
-            .border(Color.black, width: 0.2)
+        .border(Color.black, width: 0.2)
+        
+        if gameController.mBoardSize == BoardSize.LARGE {
+            button.frame(width: 18, height: 18, alignment: .topLeading)
+        } else if gameController.mBoardSize == BoardSize.MEDIUM {
+            button.frame(width: 27, height: 27, alignment: .topLeading)
+        } else {
+            button.frame(width: 36, height: 36, alignment: .topLeading)
+        }
     }
     
     init(x: Int, y: Int, function: @escaping (Int, Int) -> Void) {
